@@ -13,4 +13,27 @@ class Oddball extends Normal{
     this.speed = speed;
     this.angle = angle;
   }
+  void move(){
+   double plusminusX = Math.random();
+   double plusminusY = Math.random();
+
+   if(plusminusX < 0.5){
+     x_pos = x_pos - 1;
+   } else{
+    x_pos = x_pos + 1;
+   }
+   
+   if(plusminusY < 0.5){
+     y_pos = y_pos - 1;
+   } else{
+    y_pos = y_pos + 1;
+   }
+   
+  }
+  
+  void show(){
+   fill(c1,c2,c3);
+   
+   rect((float)x_pos, (float)y_pos, 20,20); 
+  }
 }
